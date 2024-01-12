@@ -1,3 +1,8 @@
+/*
+font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+
 html {
     box-sizing: border-box;
 }
@@ -6,6 +11,12 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+img {
+    display: block;
+    /* чтобы изображение сжималось, если экран меньше */
+    max-width: 100%;
 }
 
 body {
@@ -27,7 +38,6 @@ p {
 
 .container {
     max-width: 1110px;
-
     margin: 0 auto;
 }
 
@@ -71,10 +81,8 @@ p {
     line-height: 21px;
 }
 
-/*
-font-family: 'Open Sans', sans-serif;
-font-family: 'Oswald', sans-serif;
-*/
+/* HEADER BLOCK */
+
 .header {
     min-height: 740px;
     background-image: url(../img/first-screen-bg.jpg);
@@ -143,10 +151,14 @@ font-family: 'Oswald', sans-serif;
     line-height: 27px;
 }
 
+/* INFO BLOCK */
+
 .about {
     min-height: 1080px;
     /* для позиционирования info */
     position: relative;
+    /* чтобы отодвинуть блок EXAMPLES на 100px = 150+100 */
+    padding-top: 250px;
 }
 
 .info {
@@ -204,13 +216,82 @@ font-family: 'Oswald', sans-serif;
 
 }
 
-
 @media screen and (max-width: 768px) {
     .info {
         position: relative;
     }
+
     .about__grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* EXAMPLES BLOCK */
+.project-h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--dark-color)
+}
+
+.about__flex {
+    display: flex;
+    gap: 30px;
+}
+
+.about__flex-item {
+    max-width: 350px;
+    /* или */
+    /* margin-right: 30px; */
+}
+
+/* или */
+/* .about__flex-item:last-child {
+    margin-right: 0;
+} */
+
+
+.project-img {
+    margin-bottom: 45px;
+}
+
+.rectangle {
+    margin-bottom: 15px;
+    background-color: var(--accent-color);
+    width: 55px;
+    height: 6px;
+}
+
+.project-h3 {
+    color: var(--dark-color);
+    margin-bottom: 13px;
+}
+
+.project-p {
+    color: var(--gray-color);
+}
+
+@media screen and (max-width: 1280px) {
+    .about {
+        padding: 450px 15px 110px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+    .about__flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__flex-item {
+        /* если не установлен gap */
+        /* margin-right: 0; */
+        margin-bottom: 30px;
+    }
+    .about__flex-item:last-child{
+        margin-bottom: 0px;
     }
 }
