@@ -387,6 +387,7 @@ p {
 
 .services {
     padding: 150px 0;
+    margin-bottom: 3px;
 }
 
 .section__h2,
@@ -471,5 +472,66 @@ p {
 @media screen and (max-width: 768px) {
     .portfolio__grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* QUESTION BLOCK */
+
+.question {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+
+.question .section__h2 {
+    margin-bottom: 50px;
+}
+
+.question_items {}
+
+.question_item {}
+
+.question-h3 {
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 23px;
+}
+
+.question-h3.close {
+    margin-bottom: 33px;
+}
+
+.question-p {
+    margin-bottom: 35px;
+    color: var(--gray-color);
+    max-width: 730px;
+}
+
+.question-h3.close::before,
+.question-h3.open::before {
+    content: "";
+    display: inline-block;
+    /* у строчного мы бы не смогли установить margin, а блочный - перенёсся бы на другую строку */
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/arrow_ico.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+    margin-left: 1px;
+}
+
+/* у открытого стрелка должна быть повёрнута */
+.question-h3.open::before {
+    transform: rotate(-90deg);
+}
+
+/* селектор для .question-p который рядом с .question-h3.close */
+.question-h3.close+.question-p {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .question {
+        padding: 150px 15px 110px;
     }
 }
