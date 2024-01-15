@@ -535,3 +535,27 @@ p {
         padding: 150px 15px 110px;
     }
 }
+
+/* PARTNERS BLOCK */
+
+.partners {
+    /* margin-top: 1px; */
+    background-color: var(--dark-color);
+    min-height: 364px;
+}
+
+.partners__h2 {
+    padding-top: 100px;
+    color: #fff;
+    text-align: center;
+}
+
+.partners__grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 65px;
+}
+
+.partners__item {
+    padding-top: 50px;
+}
