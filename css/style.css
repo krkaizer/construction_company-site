@@ -158,6 +158,17 @@ p {
     line-height: 27px;
 }
 
+@media screen and (max-width: 1280px) {
+    .header {
+        padding-right: 15px;
+        padding-left: 15px;
+        min-height: 100%;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
 /* INFO BLOCK */
 
 .about {
@@ -222,14 +233,13 @@ p {
         grid-template-rows: repeat(2, 1fr);
     }
 
+    .info {
+        position: relative;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .info {
-        position: relative;
-        padding: 30px 0;
-    }
-
     .about__grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -282,7 +292,8 @@ p {
 
 @media screen and (max-width: 1280px) {
     .about {
-        padding: 450px 15px 110px 15px;
+        padding-top: 150px;
+        padding-bottom: 110px;
     }
 }
 
@@ -658,11 +669,101 @@ p {
 }
 
 /* SECOND REQUEST BLOCK */
+
 .request__letter-spacing {
     letter-spacing: 2px;
 }
 
 /* CONTACTS */
+
 .contacts {
-    padding-top: 100px;
+    padding: 100px 0 130px;
+}
+
+.contacts__h2 {
+    padding-right: 1px;
+    margin-bottom: 60px;
+}
+
+.contacts__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.contacts__item {
+    max-width: 255px;
+    text-align: center;
+}
+
+.contacts__icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+}
+
+.contacts__h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contacts__h3-gray {
+    color: var(--gray-color);
+}
+
+.contacts__h3-accent {
+    color: var(--accent-color);
+}
+
+@media screen and (max-width: 1280px) {
+    .contacts__grid {
+        padding-left: 50px;
+        padding-right: 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacts__item {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts__grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 30px 0;
+    background-color: var(--dark-color);
+    color: var(--white-color)
+}
+
+.footer__flex {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__copyright {}
+
+.footer__brand {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 1280px) {
+    .footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__flex {
+        flex-direction: column;
+        align-items: center;
+    }
 }
