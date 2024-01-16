@@ -373,13 +373,14 @@ p {
 @media screen and (max-width: 768px) {
     .request {
         padding-top: 50px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 
     .request__flex {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        text-align: center;
     }
 }
 
@@ -539,12 +540,13 @@ p {
 /* PARTNERS BLOCK */
 
 .partners {
+    padding-top: 100px;
     background-color: var(--dark-color);
     min-height: 364px;
 }
 
 .partners__h2 {
-    padding-top: 100px;
+
     color: #fff;
     text-align: center;
 }
@@ -573,6 +575,7 @@ p {
 
 .reviews {
     padding-top: 150px;
+    margin-bottom: 142px;
 }
 
 .reviews__grid {
@@ -641,6 +644,7 @@ p {
     }
     .reviews__item-author {
         padding-top: 15px;
+        padding-left: 15px;
     }
     
 }
@@ -649,4 +653,14 @@ p {
     .reviews__grid {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+/* SECOND REQUEST BLOCK */
+.request__letter-spacing {
+    letter-spacing: 2px;
+}
+
+/* CONTACTS */
+.contacts {
+    padding-top: 100px;
 }
