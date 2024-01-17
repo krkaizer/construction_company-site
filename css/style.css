@@ -508,9 +508,7 @@ p {
     margin-bottom: 23px;
 }
 
-.question-h3.close {
-    margin-bottom: 33px;
-}
+
 
 .question-p {
     margin-bottom: 35px;
@@ -518,11 +516,15 @@ p {
     max-width: 730px;
 }
 
-.question-h3.close::before,
+/* если задавать через классы close/open, а не summary/details */
+/* .question-h3.close {
+    margin-bottom: 33px;
+} */
+
+/* .question-h3.close::before,
 .question-h3.open::before {
     content: "";
     display: inline-block;
-    /* у строчного мы бы не смогли установить margin, а блочный - перенёсся бы на другую строку */
     width: 15px;
     height: 15px;
     background-image: url(../img/arrow_ico.svg);
@@ -530,16 +532,19 @@ p {
     background-position: center;
     margin-right: 15px;
     margin-left: 1px;
-}
+} */
 
-/* у открытого стрелка должна быть повёрнута */
-.question-h3.open::before {
+/* .question-h3.open::before {
     transform: rotate(-90deg);
-}
+} */
 
 /* селектор для .question-p который рядом с .question-h3.close */
-.question-h3.close+.question-p {
+/* .question-h3.close+.question-p {
     display: none;
+} */
+
+details > summary {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
@@ -705,6 +710,11 @@ p {
 .contacts__h3 {
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+.contacts__h3 a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .contacts__h3-gray {
