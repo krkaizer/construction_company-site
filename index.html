@@ -129,6 +129,21 @@
         </div>
     </section>
 
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Заголовок окна</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae quidem vitae?
+                Numquam distinctio odit animi nisi similique voluptate, perspiciatis fugit perferendis delectus
+                reprehenderit aperiam natus ipsam ipsa fuga, earum quisquam. Libero sapiente illo tenetur. Eveniet
+                beatae quasi velit alias. Labore saepe quo recusandae incidunt, qui asperiores debitis repellat itaque
+                molestiae libero, fugiat error perferendis assumenda quis, amet rerum rem. Iste veritatis ullam alias
+                unde incidunt. Quis repudiandae nam, sed rem iste architecto, ratione illo sint ex dolorum earum
+                deleniti quibusdam possimus quas repellat aliquid totam pariatur excepturi nemo ad. Voluptatum
+                laboriosam totam rerum illum incidunt eaque at ipsam!</p>
+        </div>
+    </div>
+
     <section class="request">
         <div class="container">
             <div class="request__flex">
@@ -136,10 +151,11 @@
                     <h2 class="text-h2 request-h2">Самые умные проекты</h2>
                     <h3 class="text-h3 request-h3">Реализуем самые смелые решения в России!</h3>
                 </div>
-                <button class="request__button">
+                <!-- Modal Trigger -->
+                <a class="request__button modal-trigger" href="#modal1">
                     <img class="request__button-logo" src="img/request_btn.svg" alt="Send request">
                     <h4 class="text-h4 request-h4">Ваш запрос</h4>
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -305,6 +321,16 @@
         </div>
     </section>
 
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Заголовок окна 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae quidem vitae?
+                    Numquam distinctio odit animi nisi similique voluptate, perspiciatis fugit perferendis delectus
+                    reprehenderit aperiam natus ipsam ipsa fuga, earum quisquam.</p>
+            </div>
+        </div>
+
     <section class="request">
         <div class="container">
             <div class="request__flex">
@@ -313,10 +339,16 @@
                     </h2>
                     <h3 class="text-h3 request-h3">Оставьте заявку и мы свяжемся с вами!</h3>
                 </div>
-                <button class="request__button">
+                <!-- <button class="request__button">
                     <img class="request__button-logo" src="img/request_btn.svg" alt="Send request">
                     <h4 class="text-h4 request-h4">Ваш запрос</h4>
-                </button>
+                </button> -->
+                <!-- Modal Trigger -->
+                <a class="request__button modal-trigger" href="#modal2">
+                    <img class="request__button-logo" src="img/request_btn.svg" alt="Send request">
+                    <h4 class="text-h4 request-h4">Ваш запрос</h4>
+                </a>
+
             </div>
         </div>
     </section>
